@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Store</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Online Store</h1>
+    <input type="text" id="searchInput" placeholder="Search...">
+    <div id="filterOptions">
+      <label for="categoryFilter">Category:</label>
+      <select id="categoryFilter">
+        <option value="all">All</option>
+        <option value="electronics">Electronics</option>
+        <option value="clothing">Clothing</option>
+        <option value="books">Books</option>
+      </select>
+      <label for="priceFilter">Price:</label>
+      <select id="priceFilter">
+        <option value="0">All</option>
+        <option value="1">$0 - $100</option>
+        <option value="2">$101 - $200</option>
+        <option value="3">$201 - $300</option>
+      </select>
+    </div>
+    <div id="productList" class="row"></div>
+    <div id="cart" class="mt-4">
+      <h2>Shopping Cart</h2>
+      <ul id="cartItems"></ul>
+    </div>
+
+    <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Product Details</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-4">
+            <img src="" class="img-fluid" id="productImage" alt="Product Image">
+          </div>
+          <div class="col-md-8">
+            <h4 id="productName">Product Name</h4>
+            <p><strong>Price:</strong> $<span id="productPrice">99.99</span></p>
+            <p><strong>Description:</strong> <p id="productDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac justo at erat varius aliquam eget eget purus. Morbi et massa sed ex condimentum rutrum.</p></p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+  <script src="/Script/scripts.js"></script>
+  <!-- Bootstrap JS (jQuery and Popper.js required) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
